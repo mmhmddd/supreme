@@ -1,0 +1,275 @@
+{
+  "products": [
+    {
+      "id": "Business set-90",
+      "title": "Business Box",
+      "description": "Business Set - 4B-ST Box with Flash USB and Accessories - Black Edition",
+      "category": "vip",
+      "code": "Business set-90",
+      "images": [
+        "../assets/image/vipimg/90set Business 1.png",
+        "../assets/image/vipimg/90set Business 2.png"
+      ],
+      "content": "hhhhhhhhhhhhhhhhh"
+    },
+    {
+      "id": "Vip smart-1",
+      "title": "Vip Box",
+      "description": "VIP Acrylic Circular Box Set - Flash USB and Accessories - Black Edition",
+      "category": "vip",
+      "code": " Vip smart-1",
+      "images": [
+        "../assets/image/vipimg/vip smart-1.png"
+      ],
+      "content": "hhhhhhhhhhhhhhhhh"
+    },
+    {
+      "id": "Vip smart-2",
+      "title": "VIP XL Accessory Set ",
+      "description": "VIP XL Accessory Set - Premium Box with Wireless Charger and Accessories - Black Edition",
+      "category": "vip",
+      "code": "Vip smart-2",
+      "images": [
+        "../assets/image/vipimg/vip smart-2.png",
+        "../assets/image/vipimg/vip smart-2 (2).png"
+      ]
+    },
+    {
+      "id": "vip-elegant-1",
+      "title": "VIP Acrylic Set",
+      "description": "Acrylic box with silver and black accessories for premium use.",
+      "category": "vip",
+      "code": "vip-elegant-1",
+      "images": [
+        "../assets/image/vipimg/vip-elegant-1 (1).png"
+      ]
+    },
+    {
+      "id": "vip-elegant-2",
+      "title": "VIP XL Box Set",
+      "description": "Exclusive set with black accessories, wireless charger, and more.",
+      "category": "vip",
+      "code": "vip-elegant-2",
+      "images": [
+        "../assets/image/vipimg/vip-elegant-2 (1).png",
+        "../assets/image/vipimg/vip-elegant-2 (2).png"
+      ]
+    },
+    {
+      "id": "vip-elegant-3",
+      "title": "VIP Acrylic Box",
+      "description": "Acrylic box with black accessories and wireless charger included.",
+      "category": "vip",
+      "code": "vip-elegant-3",
+      "images": [
+        "../assets/image/vipimg/vip-elegant-3 (1).png",
+        "../assets/image/vipimg/vip-elegant-3 (2).png"
+      ]
+    },
+    {
+      "id": "Business-Blue-1",
+      "title": "Dual Blue Set",
+      "description": "Blue guns, suction, and accessories for precision tasks.",
+      "category": "vip",
+      "code": "Business-Blue-1",
+      "images": [
+        "../assets/image/vipimg/Business-Blue-1.png",
+        "../assets/image/vipimg/Business-Blue-1 (2).png"
+      ]
+    },
+    {
+      "id": "Bag set-115-Hand-2",
+      "title": "Hand Bag Set",
+      "description": "Black hand bag with gun, charger, and accessories inside.",
+      "category": "vip",
+      "code": "Bag set-115-Hand-2",
+      "images": [
+        "../assets/image/vipimg/Bag set-115-Hand-2 (2).png",
+        "../assets/image/vipimg/Bag set-115-Hand-2.png"
+      ]
+    },
+    {
+      "id": "vip-mix-100.png",
+      "title": "Essential Stick Set",
+      "description": "Complete set with stick, charger, and compact accessories.",
+      "category": "vip",
+      "code": "vip-mix-100.png",
+      "images": [
+        "../assets/image/vipimg/vip-mix-100.png"
+      ]
+    },
+    {
+      "id": "Bambo-4068",
+      "title": "ECO-FRIENDLY - PEN",
+      "description": "add your logo in ECO-FRIENDLY - PEN",
+      "category": "pens",
+      "code": "Bambo-4068",
+      "images": [
+        "../assets/image/penimg/Bambo-4068 (1).png",
+        "../assets/image/penimg/Bambo-4068 (2).png"
+      ],
+      "content": "pen"
+    },
+    {
+      "id": "Cork -5012",
+      "title": "ECO-FRIENDLY - PEN",
+      "description": "add your logo in ECO-FRIENDLY - PEN",
+      "category": "pens",
+      "code": "Cork -5012",
+      "images": [
+        "../assets/image/penimg/Cork -5012.png"
+      ],
+      "content": "pen"
+    },
+    {
+      "id": "Bamboo-2301",
+      "title": "ECO-FRIENDLY - PEN",
+      "description": "add your logo in ECO-FRIENDLY - PEN",
+      "category": "pens",
+      "code": "Bamboo-2301",
+      "images": [
+        "../assets/image/penimg/Bamboo-2301.png"
+      ],
+      "content": "pen"
+    },
+    {
+      "id": "Sm-416",
+      "title": "ECO-FRIENDLY - PEN",
+      "description": "add your logo in ECO-FRIENDLY - PEN",
+      "category": "pens",
+      "code": "Sm-416",
+      "images": [
+        "../assets/image/penimg/Sm-416 (1).png",
+        "../assets/image/penimg/Sm-416 (2).png"
+      ],
+      "content": "pen"
+    },
+    {
+      "id": "5014-Bamboo",
+      "title": "ECO-FRIENDLY - PEN",
+      "description": "add your logo in ECO-FRIENDLY - PEN",
+      "category": "pens",
+      "code": "5014-Bamboo",
+      "images": [
+        "../assets/image/penimg/5014-Bamboo (1).png",
+        "../assets/image/penimg/5014-Bamboo (2).png"
+      ],
+      "content": "pen"
+    },
+    {
+      "id": " 4071",
+      "title": "Metal Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": "4071",
+      "images": [
+        "../assets/image/penimg/4071.png",
+        "../assets/image/penimg/4071 (2).png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": "Tools-Pen",
+      "title": "Metal Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": "Tools-Pen",
+      "images": [
+        "../assets/image/penimg/Tools-Pen.png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": "El-36",
+      "title": "Metal Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": "El-36",
+      "images": [
+        "../assets/image/penimg/El-36.png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": " El-321",
+      "title": "Metal Tablet Screen Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": " El-321",
+      "images": [
+        "../assets/image/penimg/El-321.png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": "Sm-728",
+      "title": "Metal Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": "Sm-728",
+      "images": [
+        "../assets/image/penimg/Sm-728.png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": "sm-717",
+      "title": "Metal Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": "sm-717",
+      "images": [
+        "../assets/image/penimg/sm-717.png",
+        "../assets/image/penimg/sm-717 (2).png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": "SM-El-117",
+      "title": "Metal Pen",
+      "description": "add your logo in Metal Pen",
+      "category": "pens",
+      "code": "SM-El-117",
+      "images": [
+        "../assets/image/penimg/SM-El-117.png",
+        "../assets/image/penimg/SM-El-117 (2).png"
+      ],
+      "content": "Metal Pen"
+    },
+    {
+      "id": "P225L-Wireless",
+      "title": "Wireless Power Bank",
+      "description": "Light-up logo, 10000mAh, suction charging, and built-in cables.",
+      "category": "electronics",
+      "code": "P225L-Wireless",
+      "images": [
+        "../assets/image/electronicsimg/P225L-Wireless.png",
+        "../assets/image/electronicsimg/P225L-Wireless (2).png"
+      ],
+      "content": "Light-up logo, wireless charging, 10000mAh capacity, safety protection, hidable phone stand, Type-C input/output, stable suction charging, built-in Micro USB, iOS, and Type-C cables."
+    },
+    {
+      "id": "P208L-Wireless",
+      "title": "Wireless Suction Power Bank",
+      "description": "10000mAh with light-up logo, Type-C ports, and safety protection.",
+      "category": "electronics",
+      "code": " P208L-Wireless",
+      "images": [
+        "../assets/image/electronicsimg/P208L-Wireless.png",
+        "../assets/image/electronicsimg/P208L-Wireless(2).png"
+      ],
+      "content": "Light-up logo, wireless charging, 10000mAh, safety protection, Type-C input/output, stable suction charging"
+    },
+    {
+      "id": "P228-Wireless",
+      "title": "15W MagSafe, 2.5W watch charger, 10000mAh.",
+      "description": "10000mAh with light-up logo, Type-C ports, and safety protection.",
+      "category": "electronics",
+      "code": "P228-Wireless",
+      "images": [
+        "../assets/image/electronicsimg/P228-Wireless.png"
+      ],
+      "content": "Wireless charging, 15W MagSafe, 2.5W watch charger, fast charge, 10000..."
+    }
+  ]
+}

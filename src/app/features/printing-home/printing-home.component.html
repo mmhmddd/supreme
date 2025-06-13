@@ -1,0 +1,98 @@
+<div class="printing-home-container">
+  <!-- Hero Section -->
+<section class="hero-section">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Supreme Printing</h1>
+    <p class="hero-description">Your trusted partner for top-quality advertising and design solutions.</p>
+  </div>
+</section>
+
+
+<!-- Text and Video Section -->
+<section class="text-video-section">
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h2>Our Services</h2>
+        <div class="language-text">
+          <p class="english-text">
+            At Supreme Printing, we offer top-quality advertising and design services. With over 9 years of experience, we create vibrant banners, flyers, and promotional materials to boost your brand.
+          </p>
+          <p class="arabic-text">
+            في سوبريم برنتينج، نقدم خدمات الإعلانات والتصميم عالية الجودة. بخبرة تزيد عن 9 سنوات، نصمم لافتات ونشرات ومواد ترويجية ملونة لتعزيز علامتك التجارية.
+          </p>
+        </div>
+      </div>
+      <div class="video-content">
+        <img src="../../../assets/image/Speedmaster .5.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Products Section -->
+<section class="products-section">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <p class="products-guide">Explore our indoor and outdoor printing solutions! Swipe to see more or click an item to view details.</p>
+    <div class="product-categories">
+      <div class="category-tab active" (click)="filterCategory('all')">All</div>
+      <div class="category-tab" (click)="filterCategory('Indoor')">Indoor</div>
+      <div class="category-tab" (click)="filterCategory('Outdoor')">Outdoor</div>
+    </div>
+    <div class="product-slider-wrapper">
+      <div class="product-slider" #productSlider>
+        <div class="product-item" *ngFor="let product of filteredProducts" (mouseenter)="onHover(product)" (mouseleave)="onLeave()"
+             [ngClass]="{'hovered': isHovered && hoveredProduct === product}">
+          <div class="product-image" (click)="openModal(product.image)">
+            <img [src]="product.image" [alt]="product.name">
+            <div class="overlay">
+              <span class="product-type">{{ product.type }}</span>
+            </div>
+            <div class="click-indicator" *ngIf="isHovered && hoveredProduct === product">👆 Click to View</div>
+          </div>
+          <h3>{{ product.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Product Image -->
+<div class="modal" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close-btn" (click)="closeModal()">×</span>
+    <img [src]="selectedImage" alt="Product Image" class="modal-image">
+  </div>
+</div>
+
+<!-- Our Machines Section -->
+<section class="machines-section">
+  <div class="container">
+    <h2 class="section-title">Our Machines</h2>
+    <p class="machines-guide">Discover the power behind our premium printing solutions. Hover over machines to see our logo!</p>
+    <div class="machine-list">
+      <!-- Machine 1 -->
+      <div class="machine-card">
+        <div class="machine-image">
+          <img src="../../../assets/image/Speedmaster SM.jpg" alt="Heidelberg Speedmaster SM">
+          <div class="overlay" (mouseenter)="showLogo($event)" (mouseleave)="hideLogo($event)">
+            <img src="../../../assets/image/logo.png" alt="Supreme Printing Logo" class="logo-overlay">
+          </div>
+        </div>
+        <h3 class="machine-name">Heidelberg Speedmaster SM</h3>
+      </div>
+      <!-- Machine 2 -->
+      <div class="machine-card">
+        <div class="machine-image">
+          <img src="../../../assets/image/Speedmaster .5.jpeg" alt="Digital Press">
+          <div class="overlay" (mouseenter)="showLogo($event)" (mouseleave)="hideLogo($event)">
+            <img src="../../../assets/image/logo.png" alt="Supreme Printing Logo" class="logo-overlay">
+          </div>
+        </div>
+        <h3 class="machine-name">???????????????????</h3>
+      </div>
+    </div>
+  </div>
+</section>

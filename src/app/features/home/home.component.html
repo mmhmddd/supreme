@@ -1,0 +1,153 @@
+<section class="hero" id="hero">
+        <div class="hero-overlay">
+            <div class="container text-center">
+                <!-- <img src="image/logo.png" alt="Supreme Printing Logo" class="hero-logo"> -->
+                <h1 class="hero-title" data-i18n="hero.title">Supreme Printing</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Welcome to Your Trusted Partner for Printing, Giveaways, and Advertising Solutions</p>
+                <a href="#services" class="btn btn-magic">Explore Now</a>
+            </div>
+        </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-us" id="about">
+  <div class="container">
+    <h2 class="section-title" data-i18n="aboutUs.title">About Us</h2>
+    <div class="company-profile">
+      <p data-i18n="aboutUs.profile1">Founded in 2016, Supreme Company for Supply and Advertising (Orchid) has been a trusted leader in advertising for 9 years, serving organizations with quality and timely solutions.</p>
+      <p data-i18n="aboutUs.profile2">We deliver tailored, high-quality advertising and printing services to exceed client expectations.</p>
+      <p data-i18n="aboutUs.profile1.ar">منذ تأسيسها في 2016، أصبحت شركة سوبريم للتوريد والإعلان (أوركيد) رائدة موثوقة في مجال الإعلان لمدة 9 سنوات، مقدمة حلول عالية الجودة للمؤسسات.</p>
+      <p data-i18n="aboutUs.profile2.ar">نقدم خدمات إعلانية وطباعة مخصصة بجودة عالية لتجاوز توقعات العملاء.</p>
+    </div>
+    <h3 class="section-subtitle" data-i18n="aboutUs.foundersTitle">Founders</h3>
+    <div class="row owners">
+      <div class="col-lg-6 owner">
+        <h4 data-i18n="aboutUs.founder1.name">Alfouly Hassan <span class="founder-number">Founder #1</span></h4>
+        <p data-i18n="aboutUs.founder1.desc">Co-founder with expertise in strategic planning, driving the company's growth and quality standards.</p>
+        <p data-i18n="aboutUs.founder1.desc.ar">المؤسس المشارك ذو خبرة في التخطيط الاستراتيجي، يدير نمو الشركة ومعايير الجودة.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+      </div>
+      <div class="col-lg-6 owner">
+        <h4 data-i18n="aboutUs.founder2.name">Mohamed Kamal <span class="founder-number">Founder #2</span></h4>
+        <p data-i18n="aboutUs.founder2.desc">Co-founder and creative visionary, enhancing client relations with innovative designs.</p>
+        <p data-i18n="aboutUs.founder2.desc.ar">المؤسس المشارك والمبدع، يعزز علاقات العملاء بتصاميم مبتكرة.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <h3 class="section-subtitle" data-i18n="aboutUs.clientsTitle">Our Valued Clients</h3>
+    <p data-i18n="aboutUs.clientsIntro" class="text-foundrs" style="font-size: 1.5rem; font-weight: 600;">We proudly serve esteemed organizations including:</p>
+    <div class="client-slider">
+      <button class="slider-arrow left-arrow" (click)="slideLeft()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="slider-container" #clientSlider>
+        <img *ngFor="let client of clients" [src]="client.image" [alt]="client.name">
+      </div>
+      <button class="slider-arrow right-arrow" (click)="slideRight()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+ <section class="our-services" id="services">
+  <div class="container">
+    <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-card offset-printing">
+          <i class="fas fa-print service-icon"></i>
+          <h3 class="service-title" data-i18n="services.offsetPrinting.title">Offset Printing</h3>
+          <p class="service-desc" data-i18n="services.offsetPrinting.desc">High-quality, large-volume printing solutions for professional brochures, posters, and more, ensuring vibrant colors and precision.</p>
+          <a routerLink="/printing" class="btn btn-primary" data-i18n="services.learnMore">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-card advertising">
+          <i class="fas fa-bullhorn service-icon"></i>
+          <h3 class="service-title">
+            <span data-i18n="services.advertising.title">Advertising & Promotion</span>
+            <br><span dir="rtl" lang="ar" data-i18n="services.advertising.titleAr">(الدعاية والإعلان)</span>
+          </h3>
+          <p class="service-desc" data-i18n="services.advertising.desc">Creative advertising campaigns and promotional materials designed to elevate your brand and engage your audience.</p>
+          <a routerLink="/printing" class="btn btn-primary" data-i18n="services.learnMore">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-card giveaways">
+          <i class="fas fa-gift service-icon"></i>
+          <h3 class="service-title" data-i18n="services.giveaways.title">Giveaway Products</h3>
+          <p class="service-desc" data-i18n="services.giveaways.desc">Customised promotional gifts, from branded pens to premium merchandise, crafted to leave a lasting impression.</p>
+          <a routerLink="/giveaway" class="btn btn-primary" data-i18n="services.learnMore">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="service-card digital-printing">
+          <i class="fas fa-laptop-code service-icon"></i>
+          <h3 class="service-title" data-i18n="services.digitalPrinting.title">Digital Printing</h3>
+          <p class="service-desc" data-i18n="services.digitalPrinting.desc">Fast, high-quality digital printing for small batches, perfect for personalised marketing materials and quick turnarounds.</p>
+          <a routerLink="/printing" class="btn btn-primary" data-i18n="services.learnMore">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Our Products Section -->
+<section class="products-section" id="products">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <div class="product-slider-wrapper">
+      <div class="product-slider" #productSlider>
+        <div class="product-item" *ngFor="let product of products">
+          <div class="product-image" (click)="openModal(product.image)">
+            <img [src]="product.image" [alt]="product.name">
+            <div class="overlay">
+              <span class="product-type">{{ product.type }}</span>
+            </div>
+          </div>
+          <h3>{{ product.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Product Image -->
+<div class="modal" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close-btn" (click)="closeModal()">×</span>
+    <img [src]="selectedImage" alt="Product Image" class="modal-image">
+  </div>
+</div>
+<!-- Clients Counter Section -->
+<section class="clients-counter-section" #counterSection>
+  <div class="container">
+    <h2 class="section-title">Our Achievements</h2>
+    <p class="section-guide">Celebrating our milestones and dedication to excellence.</p>
+    <div class="counter-wrapper">
+      <div class="counter-item" *ngFor="let counter of counters">
+        <i [class]="counter.icon"></i>
+        <span class="counter-number" [attr.data-target]="counter.target">0</span>
+        <p class="counter-label">{{ counter.label }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <app-contact></app-contact>
+</section>

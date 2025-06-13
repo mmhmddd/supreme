@@ -1,0 +1,98 @@
+<div class="giveaway-container">
+  <button class="sidebar-toggle" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <aside class="sidebar" [ngClass]="{'sidebar-open': sidebarOpen}">
+    <h3>Filters</h3>
+    <div class="filter-group">
+      <label>Categories:</label>
+      <div class="checkbox-group">
+        <label *ngFor="let cat of categories" class="checkbox-label">
+          <input type="checkbox" [value]="cat" (change)="toggleCategory($event)" />
+          <i [class]="getCategoryIcon(cat)"></i>
+          {{cat}}
+        </label>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content">
+    <div class="filter-section">
+      <div class="filter-group">
+        <label>Categories:</label>
+        <div class="checkbox-group">
+          <label *ngFor="let cat of categories" class="checkbox-label">
+            <input type="checkbox" [value]="cat" (change)="toggleCategory($event)" />
+            <i [class]="getCategoryIcon(cat)"></i>
+            {{cat}}
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="loader" *ngIf="isLoading">
+      <div class="spinner"></div>
+      Loading...
+    </div>
+    <header>
+      <h1>Giveaway Products</h1>
+    </header>
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Search products..." (input)="onSearch()">
+    </div>
+    <div class="cards-container">
+      <div *ngFor="let product of filteredProducts" class="card">
+        <div class="product-slider">
+          <div class="slider-images" #sliderImages [id]="'slider-' + product.id">
+            <img *ngFor="let img of product.images" [src]="img" alt="{{product.title}}">
+          </div>
+          <button *ngIf="product.images.length > 1" class="slider-arrow left-arrow" (click)="slideLeft(product.id)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button *ngIf="product.images.length > 1" class="slider-arrow right-arrow" (click)="slideRight(product.id)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3 class="product-title">{{product.title}}</h3>
+          <p class="product-desc">{{product.description}}</p>
+          <p class="product-code">Code: {{product.code}}</p>
+          <button class="favorite-btn" [attr.data-product-id]="product.id" (click)="toggleFavorite(product.id)">
+            <i [class]="favorites.includes(product.id) ? 'fas fa-heart' : 'far fa-heart'"></i>
+          </button>
+          <button class="details-btn" [attr.data-product-id]="product.id" (click)="openModal(product)">See Details</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div *ngIf="selectedProduct" class="modal" (click)="closeModal($event)">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span (click)="closeModal()">×</span>
+      <div class="modal-body">
+        <div class="modal-images">
+          <div class="modal-image-slider" [id]="'modal-slider-' + selectedProduct.id">
+            <img *ngFor="let img of selectedProduct.images" [src]="img" alt="{{selectedProduct.title}}">
+          </div>
+          <button *ngIf="selectedProduct.images.length > 1" class="slider-arrow left-arrow" (click)="slideModalLeft()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button *ngIf="selectedProduct.images.length > 1" class="slider-arrow right-arrow" (click)="slideModalRight()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="modal-details">
+          <h2>{{selectedProduct.title}}</h2>
+          <p class="modal-description">{{selectedProduct.description}}</p>
+          <p class="modal-code">Code: {{selectedProduct.code}}</p>
+          <p class="modal-content-text" *ngIf="selectedProduct.content">{{selectedProduct.content}}</p>
+          <div class="modal-buttons">
+            <button class="favorite-btn" [attr.data-product-id]="selectedProduct.id" (click)="toggleFavorite(selectedProduct.id)">
+              <i [class]="favorites.includes(selectedProduct.id) ? 'fas fa-heart' : 'far fa-heart'"></i>
+              {{favorites.includes(selectedProduct.id) ? 'Remove from Favorites' : 'Add to Favorites'}}
+            </button>
+            <button class="call-us-btn" (click)="callUs()">Call Us Now to Get It</button>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
