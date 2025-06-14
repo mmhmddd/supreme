@@ -43,6 +43,17 @@ throw new Error('Method not implemented.');
   @ViewChild('productSlider') productSlider!: ElementRef;
   @ViewChild('videoElement') videoElement!: ElementRef;
   @ViewChild('counterSection') counterSection!: ElementRef;
+  @ViewChild('heroSlider') heroSlider!: ElementRef;
+
+  // Hero Images Array
+  heroImages = [
+    { src: '../../../assets/image/heroslider1.png', alt: 'Hero Image 1' },
+    { src: '../../../assets/image/heroslider2.png', alt: 'Hero Image 2' },
+    { src: '../../../assets/image/heroslider3.png', alt: 'Hero Image 3' },
+    { src: '../../../assets/image/heroslider4.png', alt: 'Hero Image 4' }
+  ];
+
+  currentHeroIndex = 0; // لتتبع الصورة الحالية
 
   clients = [
     { name: 'Red Cross Organization', image: 'assets/image/Red Cross Organization.svg' },
@@ -72,7 +83,7 @@ throw new Error('Method not implemented.');
 
   private clientScrollAmount = 0;
   private clientScrollStep = 200;
-  private clientDirection = 1; // تصحيح من 2 إلى 1 لتوافق الاتجاه
+  private clientDirection = 1;
   private clientIntervalId: any;
 
   private productScrollAmount = 0;
@@ -80,10 +91,14 @@ throw new Error('Method not implemented.');
   private productDirection = 1;
   private productIntervalId: any;
 
+  private heroScrollAmount = 0; // للتوافق مع المتغيرات السابقة (مش مستخدم حاليًا)
+  private heroScrollStep = 300; // للتوافق مع المتغيرات السابقة (مش مستخدم حاليًا)
+  private heroDirection = 1; // للتوافق مع المتغيرات السابقة (مش مستخدم حاليًا)
+  private heroIntervalId: any; // إضافة المتغير الرسمي هنا
+
   showModal = false;
   selectedImage: string | null = null;
 
-  // Counter Data
   counters = [
     { label: 'Happy Clients', target: 1500, icon: 'fas fa-users' },
     { label: 'Products Created', target: 25000, icon: 'fas fa-box' },
@@ -97,6 +112,7 @@ throw new Error('Method not implemented.');
     }
     this.startAutoSlideClients();
     this.startAutoSlideProducts();
+    this.startAutoSlideHero();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -162,6 +178,32 @@ throw new Error('Method not implemented.');
     this.productIntervalId = setInterval(() => this.autoSlideProducts(), 3000);
   }
 
+  // --- HERO SLIDER ---
+  slideLeftHero() {
+    this.currentHeroIndex--;
+    if (this.currentHeroIndex < 0) {
+      this.currentHeroIndex = this.heroImages.length - 1; // يرجع لآخر صورة
+    }
+  }
+
+  slideRightHero() {
+    this.currentHeroIndex++;
+    if (this.currentHeroIndex >= this.heroImages.length) {
+      this.currentHeroIndex = 0; // يرجع لأول صورة
+    }
+  }
+
+  private autoSlideHero() {
+    this.currentHeroIndex++;
+    if (this.currentHeroIndex >= this.heroImages.length) {
+      this.currentHeroIndex = 0; // يرجع لأول صورة
+    }
+  }
+
+  private startAutoSlideHero() {
+    this.heroIntervalId = setInterval(() => this.autoSlideHero(), 3000); // تغيير كل 3 ثواني
+  }
+
   // --- MODAL ---
   openModal(imageUrl: string) {
     this.selectedImage = imageUrl;
@@ -221,5 +263,6 @@ throw new Error('Method not implemented.');
   ngOnDestroy() {
     clearInterval(this.clientIntervalId);
     clearInterval(this.productIntervalId);
+    clearInterval(this.heroIntervalId); // الآن معرف رسميًا
   }
 }

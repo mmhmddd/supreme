@@ -9,6 +9,28 @@
         </div>
 </section>
 
+
+<!-- Hero Slider Section -->
+<section class="hero-slider">
+  <div class="container">
+    <div class="slider-wrapper">
+      <button class="slider-arrow left-arrow" (click)="slideLeftHero()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="hero-slider-container" #heroSlider>
+        <div class="slide" *ngFor="let image of heroImages; let i = index" 
+             [class.active]="currentHeroIndex === i" 
+             [@slideAnimation]>
+          <img [src]="image.src" [alt]="image.alt">
+        </div>
+      </div>
+      <button class="slider-arrow right-arrow" (click)="slideRightHero()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- About Us Section -->
 <section class="about-us" id="about">
   <div class="container">
@@ -56,8 +78,6 @@
     </div>
   </div>
 </section>
-
-
 
 
 
