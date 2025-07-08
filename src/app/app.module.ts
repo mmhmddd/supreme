@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    FormsModule, // Add this line
+    FormsModule, 
     AppRoutingModule,
     SharedModule,
     FeaturesModule,

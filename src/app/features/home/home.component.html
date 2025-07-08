@@ -13,6 +13,7 @@
 <!-- Hero Slider Section -->
 <section class="hero-slider">
   <div class="container">
+    <h2 class="section-title" data-i18n="aboutUs.title">What we offer</h2>
     <div class="slider-wrapper">
       <button class="slider-arrow left-arrow" (click)="slideLeftHero()">
         <i class="fas fa-chevron-left"></i>
@@ -30,41 +31,14 @@
     </div>
   </div>
 </section>
-
-<!-- About Us Section -->
-<section class="about-us" id="about">
+<!-- About Us Section (Client Slider Only) -->
+<section class="about-us" >
   <div class="container">
-    <h2 class="section-title" data-i18n="aboutUs.title">About Us</h2>
-    <div class="company-profile">
-      <p data-i18n="aboutUs.profile1">Founded in 2016, Supreme Company for Supply and Advertising (Orchid) has been a trusted leader in advertising for 9 years, serving organizations with quality and timely solutions.</p>
-      <p data-i18n="aboutUs.profile2">We deliver tailored, high-quality advertising and printing services to exceed client expectations.</p>
-      <p data-i18n="aboutUs.profile1.ar">منذ تأسيسها في 2016، أصبحت شركة سوبريم للتوريد والإعلان (أوركيد) رائدة موثوقة في مجال الإعلان لمدة 9 سنوات، مقدمة حلول عالية الجودة للمؤسسات.</p>
-      <p data-i18n="aboutUs.profile2.ar">نقدم خدمات إعلانية وطباعة مخصصة بجودة عالية لتجاوز توقعات العملاء.</p>
-    </div>
-    <h3 class="section-subtitle" data-i18n="aboutUs.foundersTitle">Founders</h3>
-    <div class="row owners">
-      <div class="col-lg-6 owner">
-        <h4 data-i18n="aboutUs.founder1.name">Alfouly Hassan <span class="founder-number">Founder #1</span></h4>
-        <p data-i18n="aboutUs.founder1.desc">Co-founder with expertise in strategic planning, driving the company's growth and quality standards.</p>
-        <p data-i18n="aboutUs.founder1.desc.ar">المؤسس المشارك ذو خبرة في التخطيط الاستراتيجي، يدير نمو الشركة ومعايير الجودة.</p>
-        <div class="social-icons">
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-        </div>
-      </div>
-      <div class="col-lg-6 owner">
-        <h4 data-i18n="aboutUs.founder2.name">Mohamed Kamal <span class="founder-number">Founder #2</span></h4>
-        <p data-i18n="aboutUs.founder2.desc">Co-founder and creative visionary, enhancing client relations with innovative designs.</p>
-        <p data-i18n="aboutUs.founder2.desc.ar">المؤسس المشارك والمبدع، يعزز علاقات العملاء بتصاميم مبتكرة.</p>
-        <div class="social-icons">
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-    </div>
-    <h3 class="section-subtitle" data-i18n="aboutUs.clientsTitle">Our Valued Clients</h3>
-    <p data-i18n="aboutUs.clientsIntro" class="text-foundrs" style="font-size: 1.5rem; font-weight: 600;">We proudly serve esteemed organizations including:</p>
+    <h2 class="section-title" data-i18n="aboutUs.title">Discover Our Legacy</h2>
+    <p class="intro-text" data-i18n="aboutUs.clientsIntro">
+      Curious about the trusted brands we serve? Explore the story behind our success and meet the visionaries shaping our journey. 
+      <a routerLink="/about" class="explore-link">Click here to unveil more!</a>
+    </p>
     <div class="client-slider">
       <button class="slider-arrow left-arrow" (click)="slideLeft()">
         <i class="fas fa-chevron-left"></i>
@@ -78,9 +52,6 @@
     </div>
   </div>
 </section>
-
-
-
 
  <section class="our-services" id="services">
   <div class="container">

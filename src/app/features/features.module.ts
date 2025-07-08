@@ -8,11 +8,13 @@ import { SharedModule } from "../shared/shared.module";
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     HomeComponent,
     PrintingHomeComponent,
-    GiveawayComponent
+    GiveawayComponent,
+    AboutComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { FormsModule } from '@angular/forms';
   exports:[
     HomeComponent,
     GiveawayComponent,
-    PrintingHomeComponent
+    PrintingHomeComponent,
+    AboutComponent
   ]
 })
 export class FeaturesModule { }

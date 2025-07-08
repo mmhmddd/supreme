@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.setActiveLinkBasedOnRoute();
+        this.closeNavbar(); // إغلاق الـ Navbar بعد التنقل
       }
     });
     this.fragmentSubscription = this.activatedRoute.fragment.subscribe(fragment => {
@@ -45,14 +46,33 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   setActiveLink(link: string) {
     this.activeLink = link;
-    if (['home', 'about', 'services','products', 'contact'].includes(link)) {
-      this.router.navigate(['/'], { fragment: link === 'home' ? 'hero' : link });
-    } else if (link === 'printing') {
-      this.router.navigate(['/printing']);
-    } else if (link === 'giveaway') {
-      this.router.navigate(['/giveaway']);
+    switch (link) {
+      case 'home':
+        this.router.navigate(['/'], { fragment: 'hero' });
+        break;
+      case 'about':
+        this.router.navigate(['/about']);
+        break;
+      case 'services':
+        this.router.navigate(['/'], { fragment: 'services' });
+        break;
+      case 'products':
+        this.router.navigate(['/'], { fragment: 'products' });
+        break;
+      case 'contact':
+        this.router.navigate(['/'], { fragment: 'contact' });
+        break;
+      case 'printing':
+        this.router.navigate(['/printing']);
+        break;
+      case 'giveaway':
+        this.router.navigate(['/giveaway']);
+        break;
+      default:
+        this.router.navigate(['/']);
+        break;
     }
-    this.closeNavbar(); // Close navbar on link click
+    this.closeNavbar(); // إغلاق الـ Navbar بعد النقر
   }
 
   toggleNavbar() {
@@ -80,6 +100,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     if (url === '/' || url === '/home') {
       this.updateActiveLink(fragment);
+    } else if (url === '/about') {
+      this.activeLink = 'about';
     } else if (url === '/printing') {
       this.activeLink = 'printing';
     } else if (url === '/giveaway') {
@@ -100,7 +122,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       case 'services':
         this.activeLink = 'services';
         break;
-       case 'products':
+      case 'products':
         this.activeLink = 'products';
         break;
       case 'contact':
@@ -110,6 +132,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
         const url = this.router.url.split('#')[0];
         if (url === '/' || url === '/home') {
           this.activeLink = 'home';
+        } else if (url === '/about') {
+          this.activeLink = 'about';
         }
         break;
     }
